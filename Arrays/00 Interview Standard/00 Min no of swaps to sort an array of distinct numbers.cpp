@@ -1,5 +1,7 @@
+// https://www.geeksforgeeks.org/problems/minimum-swaps/1
+
 /*
-Que = Find min no of swaps required to sort an array consisting of distinct numbers
+Given an array arr[] of distinct elements. Find the minimum number of swaps required to sort the array in strictly increasing order.
 */
 
 // NOTE: Array must have distinct elements for the below solutions.
@@ -26,7 +28,7 @@ class Solution {
 
 
 
-
+// This solution is not passing some test cases
 class Solution {
     public: int minSwaps(vector < int > & a) {
         int n = a.size();
