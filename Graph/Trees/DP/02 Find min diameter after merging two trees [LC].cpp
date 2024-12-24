@@ -13,7 +13,11 @@ The diameter of a tree is the length of the longest path between any two nodes i
 Intuition:
 ----------
 1) We have to root both the trees separately at any node such that the height of these trees are minimum.
-2) Ans = minHeightOfTree1 + 1 + minHeightOfTree2
+2) node1 and node2 are the end points of diameter of tree.
+   When any node is rooted, it's max height will eventually end at end points of diameter, i.e. either node1 or node2
+   depth1 = calculated when node1 is root
+   depth2 = calculated when node2 is root
+3) Ans = minHeightOfTree1 + 1 + minHeightOfTree2
 
 
 
