@@ -87,13 +87,12 @@ public:
         dfs(node2, -1, 0, depth2, g);
 
         int minHeightOfTree = n-1;
-        int diameter = 0;
         for (int i = 0; i < n; i++) {
             int heightWhenCurNodeIsRoot = max(depth1[i], depth2[i]);
             minHeightOfTree = min(minHeightOfTree, heightWhenCurNodeIsRoot);
-
-            diameter = max({ diameter, depth1[i], depth2[i]});
         }
+        
+        int diameter = depth1[node2]; // or int diameter = depth2[node1]; 
         return { minHeightOfTree, diameter };
     }
 
@@ -119,26 +118,3 @@ public:
         return max({minHeightOfTree1 + 1 + minHeightOfTree2, diameter1, diameter2});
     }
 };
-
-/*
-Note (an edge case) -> Consider this example:
-We can root tree1 on 3 and tree2 on 0.
-
-We would expect ans = 4 + 1 + 1 = 6
-But answer is 7 since originally tree1 itself i having a diameter of 7
-
-                   0
-                 /   \
-                1       2
-                        |
-                        3  -----------------------
-                     /  |  \                      0
-                    6   5   9                   / |  \
-                        |                     1   2   3
-                        4                     
-                        |
-                        8
-                        |
-                        7
-
-*/
