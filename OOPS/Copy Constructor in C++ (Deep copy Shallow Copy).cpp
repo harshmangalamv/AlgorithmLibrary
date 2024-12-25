@@ -1,4 +1,6 @@
 // https://www.geeksforgeeks.org/copy-constructor-in-cpp/
+// https://www.udemy.com/course/beg-modern-cpp/learn/lecture/6569524#questions/15100088
+// https://www.udemy.com/course/beg-modern-cpp/learn/lecture/6569526#questions/15100088
 
 
 // Following is a simple example of copy constructor. 
