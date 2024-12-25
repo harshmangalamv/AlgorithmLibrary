@@ -165,7 +165,7 @@ public:
     // copy constructor
     String(const String& old_str) {
         size = old_str.size;
-        s = new char[size + 1];
+        s = new char[size + 1]; // is we want to copy a string of length n using strcpy, then we have to create char array of size = n+1 since last character is null terminating character
         strcpy(s, old_str.s);
     }
     // Function to change
